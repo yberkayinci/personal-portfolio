@@ -1,0 +1,189 @@
+/* Genel Stil Ayarları */
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Sidebar (Yan Menü) */
+.w3-sidebar {
+    width: 120px;
+    background-color: #222;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding-top: 20px;
+}
+
+.w3-sidebar img {
+    margin-bottom: 20px;
+}
+
+.w3-sidebar a {
+    text-align: center;
+    padding: 10px 0;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.w3-sidebar a:hover {
+    background-color: #575757;
+}
+
+.w3-sidebar .w3-bar-item.w3-black {
+    background-color: #000;
+}
+
+/* Ana İçerik */
+#main {
+    margin-left: 140px;
+    padding: 20px;
+}
+
+header {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    background-color: #000;
+}
+
+header h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* About (Hakkımda) Bölümü */
+#about {
+    padding: 64px 0;
+}
+
+#about h2 {
+    color: #ccc;
+}
+
+#about p {
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+/* Skill Bar Stilleri */
+.w3-dark-grey {
+    background-color: #444;
+}
+
+.w3-dark-grey .w3-white {
+    background-color: #fff;
+    transition: width 0.5s;
+}
+
+.w3-wide {
+    font-size: 16px;
+    color: #bbb;
+    margin-bottom: 10px;
+}
+
+/* Fotoğraf Bölümü */
+#photos {
+    padding: 64px 0;
+}
+
+#photos h2 {
+    color: #ccc;
+}
+
+.w3-row-padding img {
+    margin-bottom: 12px;
+    border-radius: 8px;
+}
+
+/* Form Stili */
+form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.w3-input {
+    border: none;
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.w3-button {
+    background-color: #555;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.w3-button:hover {
+    background-color: #777;
+}
+
+/* Footer */
+footer {
+    padding: 64px 0;
+    text-align: center;
+    font-size: 16px;
+    background-color: #111;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+footer a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px 20px;
+    background-color: #555;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+footer a:hover {
+    background-color: #777;
+}
+
+/* Küçük ekranlar için düzenleme */
+@media (max-width: 600px) {
+    #main {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .w3-top {
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .w3-top .w3-bar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .w3-sidebar {
+        display: none;
+    }
+}
