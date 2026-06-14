@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yunusberkayinci.vercel.app/sitemap.xml
