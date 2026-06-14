@@ -1,0 +1,7 @@
+# Local tooling
+.claude/
+node_modules/
+
+# Raw source assets (optimized versions live in assets/)
+WhatsApp Image*.jpeg
+Yunus_Berkay_inci_CV.docx

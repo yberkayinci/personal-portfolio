@@ -1,0 +1,22 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Yunus Berkay İnci logo">
+  <defs>
+    <linearGradient id="ybGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#38e1ff"/>
+      <stop offset="0.55" stop-color="#b14dff"/>
+      <stop offset="1" stop-color="#ff4d8d"/>
+    </linearGradient>
+  </defs>
+  <!-- hexagon frame -->
+  <path d="M32 3 L55 16.5 V43.5 L32 57 L9 43.5 V16.5 Z"
+        fill="none" stroke="url(#ybGrad)" stroke-width="3" stroke-linejoin="round"/>
+  <!-- neural branching 'Y' node -->
+  <g stroke="url(#ybGrad)" stroke-width="3.4" stroke-linecap="round" fill="url(#ybGrad)">
+    <line x1="32" y1="32" x2="32" y2="47"/>
+    <line x1="32" y1="32" x2="20.5" y2="19.5"/>
+    <line x1="32" y1="32" x2="43.5" y2="19.5"/>
+    <circle cx="32" cy="32" r="4.4"/>
+    <circle cx="20.5" cy="19.5" r="3.4"/>
+    <circle cx="43.5" cy="19.5" r="3.4"/>
+    <circle cx="32" cy="47" r="3.4"/>
+  </g>
+</svg>

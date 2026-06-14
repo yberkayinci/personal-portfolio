@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yunus Berkay İnci — Software Engineer & AI Researcher</title>
+  <meta name="description" content="Yunus Berkay İnci — Multidisciplinary Software Engineer specializing in AI, LLM/RAG, Computer Vision, Full-Stack and AIoT systems." />
+  <meta name="author" content="Yunus Berkay İnci" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Yunus Berkay İnci — Software Engineer & AI Researcher" />
+  <meta property="og:description" content="AI · LLM/RAG · Computer Vision · Full-Stack · AIoT" />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+</head>
+<body>
+  <!-- Cinematic preloader -->
+  <div id="preloader">
+    <div class="pre-inner">
+      <div class="pre-logo"><img src="assets/logo.svg" alt="YB" /></div>
+      <div class="pre-wordmark">YUNUS BERKAY İNCİ</div>
+      <div class="pre-bar"><span></span></div>
+      <div class="pre-count">0%</div>
+    </div>
+  </div>
+
+  <!-- Animated particle/neural-network background -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Moving gradient blobs (video-like motion) -->
+  <div class="blobs" aria-hidden="true">
+    <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+  </div>
+  <!-- Film grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Custom cursor glow -->
+  <div id="cursor-glow"></div>
+  <div id="cursor-dot"></div>
+
+  <!-- Scroll progress bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- ====================== NAVBAR ====================== -->
+  <header id="navbar">
+    <a href="#home" class="brand"><img src="assets/logo.svg" alt="" class="brand-logo" /><span class="brand-mark">YB</span><span class="brand-dot">.</span></a>
+    <nav id="nav-links">
+      <a href="#about"      data-nav="about"></a>
+      <a href="#skills"     data-nav="skills"></a>
+      <a href="#experience" data-nav="experience"></a>
+      <a href="#projects"   data-nav="projects"></a>
+      <a href="#research"   data-nav="research"></a>
+      <a href="#play"       data-nav="play"></a>
+      <a href="#contact"    data-nav="contact"></a>
+    </nav>
+    <div class="nav-actions">
+      <button id="lang-toggle" class="pill" title="Language">
+        <span class="lang-tr">TR</span><span class="lang-sep">/</span><span class="lang-en">EN</span>
+      </button>
+      <button id="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- ====================== HERO ====================== -->
+  <section id="home" class="hero">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <p class="hero-greeting" data-anim="up"><span class="dot-pulse"></span><span data-i18n="hero.greeting"></span></p>
+        <h1 class="hero-name" id="hero-name" data-anim="up"></h1>
+        <h2 class="hero-roles" data-anim="up"><span class="role-prefix">&lt;</span><span id="typed"></span><span class="cursor-blink">|</span><span class="role-prefix">/&gt;</span></h2>
+        <p class="hero-tagline" id="hero-tagline" data-anim="up"></p>
+        <div class="hero-cta" data-anim="up">
+          <a href="#projects" class="btn btn-primary magnetic" data-i18n="hero.cta1"></a>
+          <a href="#contact" class="btn btn-ghost magnetic" data-i18n="hero.cta2"></a>
+        </div>
+        <div class="hero-socials" id="hero-socials" data-anim="up"></div>
+      </div>
+
+      <div class="hero-photo-wrap" data-anim="zoom">
+        <div class="photo-tilt" id="photo-tilt">
+          <div class="photo-frame">
+            <img src="assets/yunus-hero.jpg" alt="Yunus Berkay İnci" loading="eager" />
+            <div class="photo-shine"></div>
+          </div>
+          <div class="photo-glow"></div>
+        </div>
+        <p class="photo-caption"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> New York · Times Square</p>
+      </div>
+    </div>
+    <a href="#about" class="scroll-hint"><span data-i18n="hero.scroll"></span><span class="mouse"></span></a>
+  </section>
+
+  <!-- ====================== MARQUEE TECH STRIP ====================== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track" id="marquee-track"></div>
+  </div>
+
+  <!-- ====================== ABOUT ====================== -->
+  <section id="about" class="section">
+    <h2 class="section-title reveal" data-i18n="sections.about"></h2>
+    <div class="about-grid">
+      <p class="about-text reveal" id="about-text"></p>
+      <div class="about-stats reveal" id="about-stats"></div>
+    </div>
+  </section>
+
+  <!-- ====================== SKILLS ====================== -->
+  <section id="skills" class="section">
+    <h2 class="section-title reveal" data-i18n="sections.skills"></h2>
+    <div class="skills-wrap" id="skills-wrap"></div>
+  </section>
+
+  <!-- ====================== EXPERIENCE / EDUCATION ====================== -->
+  <section id="experience" class="section">
+    <h2 class="section-title reveal" data-i18n="sections.experience"></h2>
+    <div class="exp-columns">
+      <div>
+        <h3 class="sub-label reveal" data-i18n="labels.experience"></h3>
+        <div class="timeline" id="timeline-exp"></div>
+      </div>
+      <div>
+        <h3 class="sub-label reveal" data-i18n="labels.education"></h3>
+        <div class="timeline" id="timeline-edu"></div>
+        <h3 class="sub-label reveal" data-i18n="labels.languages" style="margin-top:2.5rem"></h3>
+        <div id="languages-wrap"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== PROJECTS ====================== -->
+  <section id="projects" class="section">
+    <h2 class="section-title reveal" data-i18n="sections.projects"></h2>
+    <h3 class="sub-label reveal" data-i18n="labels.featured"></h3>
+    <div class="projects-grid" id="featured-grid"></div>
+    <h3 class="sub-label reveal" data-i18n="labels.allProjects" style="margin-top:3rem"></h3>
+    <div class="projects-grid" id="github-grid">
+      <p class="loading" data-i18n="labels.loading"></p>
+    </div>
+  </section>
+
+  <!-- ====================== RESEARCH / ACADEMIC ====================== -->
+  <section id="research" class="section">
+    <h2 class="section-title reveal" data-i18n="sections.research"></h2>
+    <div class="projects-grid" id="academic-grid"></div>
+
+    <h3 class="sub-label reveal" data-i18n="labels.publications" style="margin-top:3rem"></h3>
+    <div id="publications-wrap"></div>
+
+    <h3 class="sub-label reveal" data-i18n="labels.leadership" style="margin-top:3rem"></h3>
+    <div class="leadership-grid" id="leadership-wrap"></div>
+  </section>
+
+  <!-- ====================== MINI GAME ====================== -->
+  <section id="play" class="section">
+    <h2 class="section-title reveal" data-i18n="sections.play"></h2>
+    <p class="game-instr reveal" data-i18n="labels.gameInstr"></p>
+    <div class="game-shell reveal">
+      <div class="game-hud">
+        <span><span data-i18n="labels.gameScore"></span>: <b id="game-score">0</b></span>
+        <span><span data-i18n="labels.gameBest"></span>: <b id="game-best">0</b></span>
+      </div>
+      <canvas id="game-canvas" width="800" height="450"></canvas>
+      <div class="game-overlay" id="game-overlay">
+        <p id="game-msg"></p>
+        <button id="game-btn" class="btn btn-primary" data-i18n="labels.gameStart"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== CONTACT ====================== -->
+  <section id="contact" class="section">
+    <h2 class="section-title reveal" data-i18n="sections.contact"></h2>
+    <p class="contact-text reveal" data-i18n="labels.contactText"></p>
+    <div class="contact-cards reveal" id="contact-cards"></div>
+  </section>
+
+  <!-- ====================== FOOTER ====================== -->
+  <footer>
+    <p id="footer-text"></p>
+  </footer>
+
+  <button id="to-top" aria-label="Top">↑</button>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
